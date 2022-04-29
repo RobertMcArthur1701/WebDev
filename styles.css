@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    background-color: aquamarine;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: green;
+    font-size: 60px;
+    background-color: powderblue;
+    font-family: 'JetBrains Mono';
+}
+
+p {
+    font-size: 25px
+}
