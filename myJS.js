@@ -1,3 +1,3 @@
 function display() {
-    document.getElementById("demo").innerHTML = "Paragraph has been modified";
+    document.getElementById("lucas").src = "lucassat.jpg";
 }
