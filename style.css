@@ -38,7 +38,7 @@ main {
     width: 5rem;
     height: 100vh;
     position: fixed;
-    background-color: grey;
+    background-color: powderblue;
     transition: width 200ms ease;
 }
 
