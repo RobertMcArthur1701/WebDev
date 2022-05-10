@@ -1,6 +1,6 @@
 :root {
     font-size: 16px;
-    font-family: JetBrains Mono;
+    font-family: 'JetBrains Mono';
     --text-primary: red;
     --text-secondary: hotpink;
     --bg-primary: purple;
