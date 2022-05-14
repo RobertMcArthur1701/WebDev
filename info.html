@@ -9,5 +9,7 @@
 <body>
     <h1>Testtext</h1>
     <?php phpinfo(); ?>
+    <?php $dbconn = pg_connect("host=localhost port=5432 dbname=myWebDB user=postgres password=tmoli42/Moistening");?>
+    <?php pg_host(); ?>
 </body>
 </html>
