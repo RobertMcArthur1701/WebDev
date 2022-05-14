@@ -30,6 +30,11 @@
             $pdo = null;
         }
     }
+    $result = pg_query("SELECT * FROM example");
+    if (!$result) {
+        echo "An error occurred.\n";
+        exit;
+    }
     ?>
 </body>
 </html>
