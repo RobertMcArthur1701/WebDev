@@ -16,14 +16,14 @@
     $dbname = 'myWebDB';
     $dbh = new PDO("pgsql:host=$host;dbname=$dbname", $dbuser, $dbpass);    
     $sql = 'SELECT * FROM example';
-    print "<p>"
+    <!-- print "<p>" -->
     foreach ($dbh->query($sql) as $row)
     {
         print $row['table_id'] . " ";
         print $row['name'] . "-->";
         print $row['email'] . "<br>";
     }
-    print "</p>"
+    <!-- print "</p>" -->
     tableQuery();
     ?>
     <button type="button" onclick="phpPgsqlQuery()" style="width: 120px; height: 45px;">Display database contents</button>
