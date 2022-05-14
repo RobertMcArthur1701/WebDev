@@ -17,9 +17,9 @@
     $sql = 'SELECT * FROM example';
     foreach ($dbh->query($sql) as $row)
     {
-        print $row['name'] . " ";
+        print $row['table_id'] . " ";
         print $row['name'] . "-->";
-        print $row['name'] . "<br>";
+        print $row['email'] . "<br>";
     }
     ?>
 </body>
