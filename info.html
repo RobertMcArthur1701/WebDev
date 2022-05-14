@@ -8,10 +8,23 @@
 </head>
 <body>
     <h1>Testtext</h1>
-    <!-- <?php $dbconn = pg_connect("host=localhost port=5432 dbname=myWebDB user=postgres password=tmoli42/Moistening");?> -->
+    <?php 
+    $conn = pg_pconnect("host=localhost port=5432 dbname=myWebDB user=postgres password=tmoli42/Moistening");
+    if (!$conn) {
+        echo "Error connection failed.\n";
+        exit;
+    }
+    
+    $result = pg_query("SELECT * FROM example");
+    if (!$result) {
+        echo "An error occurred.\n";
+        exit;
+    }
+    
+    ?>
     <!-- <?php pg_host(); ?> -->
     <!-- <?php phpinfo(); ?> -->
-    <?php
+    <!-- <?php
 
     require_once 'config.php';
 
@@ -30,11 +43,6 @@
             $pdo = null;
         }
     }
-    $result = pg_query("SELECT * FROM example");
-    if (!$result) {
-        echo "An error occurred.\n";
-        exit;
-    }
-    ?>
+    ?> -->
 </body>
 </html>
