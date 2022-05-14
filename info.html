@@ -8,8 +8,28 @@
 </head>
 <body>
     <h1>Testtext</h1>
-    <?php $dbconn = pg_connect("host=localhost port=5432 dbname=myWebDB user=postgres password=tmoli42/Moistening");?>
-    <?php pg_host(); ?>
+    <!-- <?php $dbconn = pg_connect("host=localhost port=5432 dbname=myWebDB user=postgres password=tmoli42/Moistening");?> -->
+    <!-- <?php pg_host(); ?> -->
     <!-- <?php phpinfo(); ?> -->
+    <?php
+
+    require_once 'config.php';
+
+    try {
+        $dsn = "pgsql:host=$host;port=5432;dbname=$db;";
+        // make a database connection
+        $pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+
+        if ($pdo) {
+            echo "Connected to the $db database successfully!";
+        }
+    } catch (PDOException $e) {
+        die($e->getMessage());
+    } finally {
+        if ($pdo) {
+            $pdo = null;
+        }
+    }
+    ?>
 </body>
 </html>
