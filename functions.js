@@ -9,5 +9,5 @@ function display() {
 
 function phpPgsqlQuery() {
     var queryResult = "<?php tableQuery(); ?>"
-    document.write(queryResult)
+    document.write(<h1>success</h1>, queryResult)
 }
