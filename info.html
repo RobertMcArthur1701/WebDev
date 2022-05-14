@@ -9,40 +9,18 @@
 <body>
     <h1>Testtext</h1>
     <?php 
-    $conn = pg_pconnect("host=localhost port=5432 dbname=myWebDB user=postgres password=tmoli42/Moistening");
-    if (!$conn) {
-        echo "Error connection failed.\n";
-        exit;
+    $dbuser = 'postgres';
+    $dbpass = 'tmoli42/Moistening';
+    $host = 'localhost';
+    $dbname = 'myWebDB';
+    $dbh = new PDO("pgsql:host=$host;dbname=$dbname", $dbuser, $dbpass);    
+    $sql = 'SELECT * FROM example';
+    foreach ($dbh->query($sql) as $row)
+    {
+        print $row['name'] . " ";
+        print $row['name'] . "-->";
+        print $row['name'] . "<br>";
     }
-    
-    $result = pg_query("SELECT * FROM example");
-    if (!$result) {
-        echo "An error occurred.\n";
-        exit;
-    }
-    echo "$result"
     ?>
-    <!-- <?php pg_host(); ?> -->
-    <!-- <?php phpinfo(); ?> -->
-    <!-- <?php
-
-    require_once 'config.php';
-
-    try {
-        $dsn = "pgsql:host=$host;port=5432;dbname=$db;";
-        // make a database connection
-        $pdo = new PDO($dsn, $user, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-
-        if ($pdo) {
-            echo "Connected to the $db database successfully!";
-        }
-    } catch (PDOException $e) {
-        die($e->getMessage());
-    } finally {
-        if ($pdo) {
-            $pdo = null;
-        }
-    }
-    ?> -->
 </body>
 </html>
