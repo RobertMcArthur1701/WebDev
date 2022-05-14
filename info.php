@@ -7,7 +7,7 @@
     <title>PHP Info</title>
 </head>
 <body>
+    <h1>Testtext</h1>
     <?php phpinfo(); ?>
-    <!-- <?php include 'info.php';?> -->
 </body>
 </html>
