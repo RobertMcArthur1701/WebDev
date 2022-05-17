@@ -9,3 +9,4 @@ until `test $currentOption = 9`; do
     echo "5- Protegir un fitxer"
     echo ""
     echo "9- Finalitzar, sortir d'aquest menu"
+done
