@@ -21,4 +21,5 @@ until `test $currentOption = 9`; do
     9)  echo 'Sortint...'
         ;;
     esac
+    read -p "Pitjar el boto intro per continuar..." sigan
 done
