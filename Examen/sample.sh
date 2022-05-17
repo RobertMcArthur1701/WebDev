@@ -34,7 +34,7 @@ until `test $currentOption = 9`; do
         echo "Voleu [d]onar o [l]levar permisos? "
         read permType
         
-        if [[ $permType=="d" ]]
+        if [[ "$permType"=="d" ]]
         then
             echo "Voleu canviar els permisos de [l]ectura o [e]scritura? "
             read whatPerm
@@ -44,13 +44,13 @@ until `test $currentOption = 9`; do
                 read whoPerm
                 if [[ "$whoPerm"=="p" ]]
                 then
-                    sudo chmod u+r $fileChange
+                    sudo chmod u+r "$fileChange"
                 elif [[ "$whoPerm"=="g" ]]
                 then
-                    sudo chmod g+r $fileChange
+                    sudo chmod g+r "$fileChange"
                 elif [[ "$whoPerm"=="a" ]]
                 then
-                    sudo chmod o+r $fileChange
+                    sudo chmod o+r "$fileChange"
                 else
                     echo "Argument invalid proporcionat. "
                 fi
@@ -60,13 +60,13 @@ until `test $currentOption = 9`; do
                 read whoPerm
                 if [[ "$whoPerm"=="p" ]]
                 then
-                    sudo chmod u+w $fileChange
+                    sudo chmod u+w "$fileChange"
                 elif [[ "$whoPerm"=="g" ]]
                 then
-                    sudo chmod g+w $fileChange
+                    sudo chmod g+w "$fileChange"
                 elif [[ "$whoPerm"=="a" ]]
                 then
-                    sudo chmod o+w $fileChange
+                    sudo chmod o+w "$fileChange"
                 else
                     echo "Argument invalid proporcionat. "
                 fi
@@ -83,13 +83,13 @@ until `test $currentOption = 9`; do
                 read whoPerm
                 if [[ "$whoPerm"=="p" ]]
                 then
-                    sudo chmod u-r $fileChange
+                    sudo chmod u-r "$fileChange"
                 elif [[ "$whoPerm"=="g" ]]
                 then
-                    sudo chmod g-r $fileChange
+                    sudo chmod g-r "$fileChange"
                 elif [[ "$whoPerm"=="a" ]]
                 then
-                    sudo chmod o-r $fileChange
+                    sudo chmod o-r "$fileChange"
                 else
                     echo "Argument invalid proporcionat. "
                 fi
@@ -99,13 +99,13 @@ until `test $currentOption = 9`; do
                 read whoPerm
                 if [[ "$whoPerm"=="p" ]]
                 then
-                    sudo chmod u-w $fileChange
+                    sudo chmod u-w "$fileChange"
                 elif [[ "$whoPerm"=="g" ]]
                 then
-                    sudo chmod g-w $fileChange
+                    sudo chmod g-w "$fileChange"
                 elif [[ "$whoPerm"=="a" ]]
                 then
-                    sudo chmod o-w $fileChange
+                    sudo chmod o-w "$fileChange"
                 else
                     echo "Argument invalid proporcionat. "
                 fi
