@@ -34,21 +34,21 @@ until `test $currentOption = 9`; do
         echo "Voleu [d]onar o [l]levar permisos? "
         read permType
         
-        if [[ $permType=="d" ]]
+        if [[ $permType == "d" ]]
         then
             echo "Voleu canviar els permisos de [l]ectura o [e]scritura? "
             read whatPerm
-            if [[ $whatPerm=="l" ]]
+            if [[ $whatPerm == "l" ]]
             then
                 echo "Voleu canviar-los al [p]ropietari, [g]rup o [a]ltres? "
                 read whoPerm
-                if [[ $whoPerm=="p" ]]
+                if [[ $whoPerm == "p" ]]
                 then
                     sudo chmod u+r "$fileChange"
-                elif [[ $whoPerm=="g" ]]
+                elif [[ $whoPerm == "g" ]]
                 then
                     sudo chmod g+r "$fileChange"
-                elif [[ $whoPerm=="a" ]]
+                elif [[ $whoPerm == "a" ]]
                 then
                     sudo chmod o+r "$fileChange"
                 else
