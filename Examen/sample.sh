@@ -28,10 +28,94 @@ until `test $currentOption = 9`; do
         lineCount=`wc -l $readFile`
         echo "Aquest fitxer conte ${wordCount//$readFile}paraules i ${lineCount//$readFile}linees. "
         ;;
-
-
-
-
+    5)  echo "A quin fitxer voleu alterar els permisos? "
+        read fileChange
+        
+        echo "Voleu [d]onar o [l]levar permisos? "
+        read permType
+        
+        if [[ $permType=="d"]]
+        then
+            echo "Voleu canviar els permisos de [l]ectura o [e]scritura? "
+            read whatPerm
+            if [[ "$whatPerm"=="l" ]]
+            then
+                echo "Voleu canviar-los al [p]ropietari, [g]rup o [a]ltres? "
+                read whoPerm
+                if [[ "$whoPerm"=="p" ]]
+                then
+                    sudo chmod u+r $fileChange
+                elif [[ "$whoPerm"=="g" ]]
+                then
+                    sudo chmod g+r $fileChange
+                elif [[ "$whoPerm"=="a" ]]
+                then
+                    sudo chmod o+r $fileChange
+                else
+                    echo "Argument invalid proporcionat. "
+                fi
+            elif [[ "$whatPerm"=="e" ]]
+            then
+                echo "Voleu canviar-los al [p]ropietari, [g]rup o [a]ltres? "
+                read whoPerm
+                if [[ "$whoPerm"=="p" ]]
+                then
+                    sudo chmod u+w $fileChange
+                elif [[ "$whoPerm"=="g" ]]
+                then
+                    sudo chmod g+w $fileChange
+                elif [[ "$whoPerm"=="a" ]]
+                then
+                    sudo chmod o+w $fileChange
+                else
+                    echo "Argument invalid proporcionat. "
+                fi
+            else
+                echo "Argument invalid proporcionat. "
+            fi
+        elif [[ "$permType"=="l" ]]
+        then
+            echo "Voleu canviar els permisos de [l]ectura o [e]scritura? "
+            read whatPerm
+            if [[ "$whatPerm"=="l" ]]
+            then
+                echo "Voleu canviar-los al [p]ropietari, [g]rup o [a]ltres? "
+                read whoPerm
+                if [[ "$whoPerm"=="p" ]]
+                then
+                    sudo chmod u-r $fileChange
+                elif [[ "$whoPerm"=="g" ]]
+                then
+                    sudo chmod g-r $fileChange
+                elif [[ "$whoPerm"=="a" ]]
+                then
+                    sudo chmod o-r $fileChange
+                else
+                    echo "Argument invalid proporcionat. "
+                fi
+            elif [[ "$whatPerm"=="e" ]]
+            then
+                echo "Voleu canviar-los al [p]ropietari, [g]rup o [a]ltres? "
+                read whoPerm
+                if [[ "$whoPerm"=="p" ]]
+                then
+                    sudo chmod u-w $fileChange
+                elif [[ "$whoPerm"=="g" ]]
+                then
+                    sudo chmod g-w $fileChange
+                elif [[ "$whoPerm"=="a" ]]
+                then
+                    sudo chmod o-w $fileChange
+                else
+                    echo "Argument invalid proporcionat. "
+                fi
+            else
+                echo "Argument invalid proporcionat. "
+            fi
+        else
+            echo "Argument invalid proporcionat. "
+        fi
+        ;;
 
     9)  echo 'Sortint...'
         ;;
