@@ -9,4 +9,15 @@ until `test $currentOption = 9`; do
     echo "5- Protegir un fitxer"
     echo ""
     echo "9- Finalitzar, sortir d'aquest menu"
+    read currentOption
+
+    case $currentOption in
+    1)  ls -l
+        ;;
+    2)  echo "Quin fitxer o directori cerques? "
+        read findName
+        find -name *$findName*
+        ;;
+    9)  echo 'Sortint...'
+        ;;
 done
