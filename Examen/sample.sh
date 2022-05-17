@@ -31,7 +31,7 @@ until `test $currentOption = 9`; do
     5)  echo "A quin fitxer voleu alterar els permisos? "
         read fileChange
         
-        if [[ ! -f $fileChange ]]
+        if [[ -f $fileChange ]]
         then
             echo "Voleu [d]onar o [l]levar permisos? "
             read permType
