@@ -20,4 +20,5 @@ until `test $currentOption = 9`; do
         ;;
     9)  echo 'Sortint...'
         ;;
+    esac
 done
