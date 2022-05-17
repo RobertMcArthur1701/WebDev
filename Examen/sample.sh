@@ -18,6 +18,21 @@ until `test $currentOption = 9`; do
         read findName
         find -name *$findName*
         ;;
+    3)  echo "Quin nom vols posar-li al fitxer? "
+        read fileName
+        vim $fileName
+        ;;
+    4)  echo "De quin fitxer vols comptar les paraules "
+        read readFile
+        wordCount = wc -w $readFile
+        lineCount = wc -l $readFile
+        echo "Aquest fitxer conte $wordCount paraules i $lineCount linees. "
+        ;;
+
+
+
+
+
     9)  echo 'Sortint...'
         ;;
     esac
