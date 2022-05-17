@@ -34,7 +34,7 @@ until `test $currentOption = 9`; do
         echo "Voleu [d]onar o [l]levar permisos? "
         read permType
         
-        if [[ $permType=="d"]]
+        if [[ $permType=="d" ]]
         then
             echo "Voleu canviar els permisos de [l]ectura o [e]scritura? "
             read whatPerm
