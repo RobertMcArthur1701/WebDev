@@ -54,17 +54,17 @@ until `test $currentOption = 9`; do
                 else
                     echo "Argument invalid proporcionat. "
                 fi
-            elif [[ "$whatPerm"=="e" ]]
+            elif [[ $whatPerm == "e" ]]
             then
                 echo "Voleu canviar-los al [p]ropietari, [g]rup o [a]ltres? "
                 read whoPerm
-                if [[ "$whoPerm"=="p" ]]
+                if [[ $whoPerm == "p" ]]
                 then
                     sudo chmod u+w "$fileChange"
-                elif [[ "$whoPerm"=="g" ]]
+                elif [[ $whoPerm == "g" ]]
                 then
                     sudo chmod g+w "$fileChange"
-                elif [[ "$whoPerm"=="a" ]]
+                elif [[ $whoPerm == "a" ]]
                 then
                     sudo chmod o+w "$fileChange"
                 else
@@ -73,37 +73,37 @@ until `test $currentOption = 9`; do
             else
                 echo "Argument invalid proporcionat. "
             fi
-        elif [[ "$permType"=="l" ]]
+        elif [[ $permType == "l" ]]
         then
             echo "Voleu canviar els permisos de [l]ectura o [e]scritura? "
             read whatPerm
-            if [[ "$whatPerm"=="l" ]]
+            if [[ $whatPerm == "l" ]]
             then
                 echo "Voleu canviar-los al [p]ropietari, [g]rup o [a]ltres? "
                 read whoPerm
-                if [[ "$whoPerm"=="p" ]]
+                if [[ $whoPerm =="p" ]]
                 then
                     sudo chmod u-r "$fileChange"
-                elif [[ "$whoPerm"=="g" ]]
+                elif [[ $whoPerm =="g" ]]
                 then
                     sudo chmod g-r "$fileChange"
-                elif [[ "$whoPerm"=="a" ]]
+                elif [[ $whoPerm =="a" ]]
                 then
                     sudo chmod o-r "$fileChange"
                 else
                     echo "Argument invalid proporcionat. "
                 fi
-            elif [[ "$whatPerm"=="e" ]]
+            elif [[ $whatPerm =="e" ]]
             then
                 echo "Voleu canviar-los al [p]ropietari, [g]rup o [a]ltres? "
                 read whoPerm
-                if [[ "$whoPerm"=="p" ]]
+                if [[ $whoPerm =="p" ]]
                 then
                     sudo chmod u-w "$fileChange"
-                elif [[ "$whoPerm"=="g" ]]
+                elif [[ $whoPerm =="g" ]]
                 then
                     sudo chmod g-w "$fileChange"
-                elif [[ "$whoPerm"=="a" ]]
+                elif [[ $whoPerm =="a" ]]
                 then
                     sudo chmod o-w "$fileChange"
                 else
