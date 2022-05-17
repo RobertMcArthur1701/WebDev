@@ -26,7 +26,7 @@ until `test $currentOption = 9`; do
         read readFile
         wordCount=`wc -w $readFile`
         lineCount=`wc -l $readFile`
-        echo "Aquest fitxer conte $wordCount paraules i $lineCount linees. "
+        echo "Aquest fitxer conte ${wordCount//$readFile} paraules i $lineCount linees. "
         ;;
 
 
