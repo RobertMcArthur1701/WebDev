@@ -24,8 +24,8 @@ until `test $currentOption = 9`; do
         ;;
     4)  echo "De quin fitxer vols comptar les paraules "
         read readFile
-        wordCount = wc -w $readFile
-        lineCount = wc -l $readFile
+        wordCount=`wc -w $readFile`
+        lineCount=`wc -l $readFile`
         echo "Aquest fitxer conte $wordCount paraules i $lineCount linees. "
         ;;
 
