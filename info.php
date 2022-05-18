@@ -7,14 +7,12 @@
         $dbname = 'myWebDB';
         $dbh = new PDO("pgsql:host=$host;dbname=$dbname", $dbuser, $dbpass);    
         $sql = 'SELECT * FROM example';
-        functions tableQuery() {
-            foreach ($dbh->query($sql) as $row)
-            {
-                print $row['table_id'] . " ";
-                print $row['name'] . "--";
-                print $row['email'] . "<br>";
-            }
+        foreach ($dbh->query($sql) as $row)
+        {
+            print $row['table_id'] . " ";
+            print $row['name'] . "--";
+            print $row['email'] . "<br>";
         }
-        tableQuery();
+        
     ?>
 </html>
