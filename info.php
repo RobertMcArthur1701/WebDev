@@ -1,4 +1,4 @@
-<head>
+<html>
     <?php phpinfo();?>
     <?php
         $dbuser = 'postgres';
