@@ -6,8 +6,3 @@ function display() {
         document.getElementById("lucas").src = "lucas.jpg";
     }
 }
-
-function phpPgsqlQuery() {
-    var queryResult = "<?php tableQuery(); ?>"
-    document.write("<h1>success</h1>", queryResult)
-}
