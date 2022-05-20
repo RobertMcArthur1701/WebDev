@@ -9,3 +9,5 @@ for (i in myNums) {
         oddNums++
     }
 }
+
+document.write("Entre los numeros 1 y 9 hay " + oddNums + " numeros impares y " + evenNums + " numeros pares. ")
