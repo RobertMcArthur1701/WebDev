@@ -121,11 +121,11 @@ main {
 
 .logo svg {
     transform: rotate(0deg);
-    transition: transform 250ms;
+    transition: transform 550ms;
 }
 
 .navbar:hover .logo svg {
-    transform: rotate(-1080deg);
+    transform: rotate(-720deg);
 }
 
 h1 {
