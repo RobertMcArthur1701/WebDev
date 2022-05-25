@@ -121,7 +121,7 @@ main {
 
 .logo svg {
     transform: rotate(0deg);
-    transition: transform 550ms;
+    transition: transform 100ms;
 }
 
 .navbar:hover .logo svg {
